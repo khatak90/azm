@@ -20,11 +20,15 @@ class ParentController extends Controller
     public function becomeParent(Request $request)
     {
         //query builder
-        DB::table('role_user')->where('id',\Auth::user()->id)->update(['role_id',4]);
+       \DB::table('role_user')->where('user_id',\Auth::user()->id)->update(['role_id'=>4]);
 
-        DB::table('parent_student')->insert(
+        \DB::table('parent_student')->insert(
             ['parent_id' => \Auth::user()->id, 'student_id' =>  $request->input('student_id')]
         );
+
+        return redirect()->route('parent-dashboard') ;
+
+
 
     }
 

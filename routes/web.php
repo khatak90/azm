@@ -136,7 +136,14 @@ Route::group(['middleware' => 'auth'], function () {
 
     Route::group(['middleware' => 'role:parent'], function () {
 
-        Route::get('parent/dashboard', 'ParentController@index')->name('parent.dashboard');
+        Route::get('parent/dashboard', 'ParentController@index')->name('parent-dashboard');
+
+
+    });
+
+    Route::group(['middleware' => 'role:principal'], function () {
+
+        Route::get('principal/dashboard', 'PrincipalController@index')->name('principal-dashboard');
 
 
     });
@@ -182,5 +189,8 @@ Route::group(['middleware' => 'auth'], function () {
         });
         Route::get('course-learn/{course_slug}', 'CourseController@courseLearn')->name('course.learn');
     });
+
+
+    
     
 });

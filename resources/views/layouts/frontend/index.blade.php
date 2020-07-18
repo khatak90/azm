@@ -201,11 +201,11 @@
         </div>
       </div>
     </div>
-    <div class="modal" id="myModal">
+    <div class="modal" id="myModal1">
         <div class="modal-dialog">
           <div class="modal-content">
           <div class="modal-header bi-header ">
-              <h5 class="col-12 modal-title text-center bi-header-seperator-head">Become an Instructor</h5>
+              <h5 class="col-12 modal-title text-center bi-header-seperator-head">Become Parent</h5>
               <button type="button" class="close" data-dismiss="modal">&times;</button>
           </div>
              
@@ -217,7 +217,7 @@
                           <div class="row">
                               <div class="col-6">
                                   <label>Student ID</label>
-                                  <input type="number" class="form-control form-control-sm" placeholder="First Name" name="first_name" required>
+                                  <input type="number" class="form-control form-control-sm" placeholder="First Name" name="student_id" required>
                               </div>
   
                       <div class="form-group mt-4">
